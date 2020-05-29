@@ -23,7 +23,7 @@ export class App extends Component {
                 query: {textInBar}
             }
         }).then(
-            (response) => {this.setState({numberOfResults: response.data.total, results: [response.data.results]})}
+            (response) => {this.setState({numberOfResults: response.data.total, results: response.data.results})}
         );
     }
 
