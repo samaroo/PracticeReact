@@ -31,10 +31,12 @@ export class SearchBar extends Component {
                 <form onSubmit={this.handleSubmit} className="ui icon input">
                     <input 
                     className="prompt"
-                    placeholder="Search images..."
+                    placeholder="Search YouTube..."
                     type="text"
                     onChange={this.handleChange}
                     value={this.state.textInBar}
+                    onFocus={() => {document.getElementById("main").style.filter = "blur(5px)"; document.getElementById("main").style.transition = "all 0.3s ease"}}
+                    onBlur={() => document.getElementById("main").style.filter = "none"}
                     />
                     <i class="search icon"></i>
                 </form>

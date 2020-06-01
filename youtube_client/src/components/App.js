@@ -35,12 +35,10 @@ export class App extends Component {
                 <div className="searchBarContainer">
                     <SearchBar submitHelper={this.submitHelper}/>
                 </div>
-                <div className="main">
+                <div id="main">
                     <div className="videoPlayer">
-                        Video Player
                     </div>
                     <div className="relatedVideos">
-                        Related Videos
                     </div>
                 </div>
             </div>
