@@ -20,7 +20,8 @@ export class App extends Component {
                 Authorization: "Client-ID cwRIPWdrcFoXqbTnb31n-1vmEhHYE9DWsbXpLDpNhZ0"
             },
             params: {
-                query: {textInBar}
+                query: textInBar
+                //orientation: "landscape"
             }
         }).then(
             (response) => {this.setState({numberOfResults: response.data.total, results: response.data.results})}

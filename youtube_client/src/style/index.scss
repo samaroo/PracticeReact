@@ -1,0 +1,30 @@
+.searchBarContainer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    place-content: center space-around;
+    height: 100vh;
+    background: blue;
+}
+
+.videoPlayer{
+    display: inline-block;
+    background: red;
+    height: 200px;
+}
+
+.relatedVideos{
+    display: inline-block;
+    background: red;
+    height: 200px;
+}
+
+.content{
+}
