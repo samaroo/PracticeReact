@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import { fetchData } from '../Redux/ActionCreators/FetchData'
+import { fetchPosts } from '../Redux/ActionCreators/FetchPosts'
 
 //style
 import '../Style/App.css'
@@ -8,12 +8,12 @@ import '../Style/App.css'
 export class App extends Component {
 
     componentDidMount() {
-        this.props.fetchData()
+        this.props.fetchPosts()
     }
 
     renderData = () => {
-        return this.props.response.map((result) => {
-            return <li>{result.title}</li>
+        return this.props.posts.map((post) => {
+            return <li>{post.title}</li>
         })
     }
 
@@ -31,7 +31,7 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
     //return {response: state.response}
-    return {response: state.response}
+    return {posts: state.posts}
 }
 
-export default connect(mapStateToProps, {fetchData})(App)
+export default connect(mapStateToProps, {fetchPosts})(App)
