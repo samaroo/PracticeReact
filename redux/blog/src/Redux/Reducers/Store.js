@@ -4,10 +4,12 @@ import {combineReducers} from 'redux'
 
 //import reducers
 import {fetchPostsReducer} from './FetchPostsReducer'
+import {fetchUserReducer} from './FetchUserReducer'
 
 //create combined reducer
 const combinedReducers = combineReducers({
-    posts: fetchPostsReducer
+    posts: fetchPostsReducer,
+    users: fetchUserReducer
 })
 
 //create & export store

@@ -13,7 +13,7 @@ export class App extends Component {
 
     renderData = () => {
         return this.props.posts.map((post) => {
-            return <li>{post.title}</li>
+            return <li key={post.id}>{post.title}</li>
         })
     }
 
@@ -31,7 +31,7 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
     //return {response: state.response}
-    return {posts: state.posts}
+    return {posts: state.posts, users: state.users}
 }
 
 export default connect(mapStateToProps, {fetchPosts})(App)
